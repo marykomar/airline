@@ -31,14 +31,11 @@ Show all airlines
 airlines
 ```
 
+Create airline
+
 ```
 create-airline "New airline"
 
-```
-
-Create airline
-```
-airlines
 ```
 
 Calculate the total capacity and carrying capacity of all the aircraft in the airline
