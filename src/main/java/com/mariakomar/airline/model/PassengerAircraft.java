@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Inheritance(
         strategy = InheritanceType.JOINED
 )
-public abstract class PassengerAircraft extends Aircraft{
+public abstract class PassengerAircraft extends Aircraft {
 
     @Column(name = "number_of_passengers")
     private int maximumNumberOfPassengers;

@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "cargo_aircraft")
-public class CargoAircraft extends Aircraft{
+public class CargoAircraft extends Aircraft {
 
     @Column(name = "cargo_weight")
     private int maximumCargoWeight;

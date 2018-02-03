@@ -114,7 +114,7 @@ public abstract class Aircraft {
 
     protected abstract int calculateCrewWeight();
 
-    protected int calculatePersonsWeight(int numberOPersons){
-        return numberOPersons * AVERAGE_PERSON_WEIGHT;
+    protected int calculatePersonsWeight(int numberOfPersons) {
+        return numberOfPersons * AVERAGE_PERSON_WEIGHT;
     }
 }
