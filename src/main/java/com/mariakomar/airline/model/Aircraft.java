@@ -27,20 +27,23 @@ public abstract class Aircraft {
     @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", initialValue = 50)
     private Long id;
 
-    @Column(name = "fule_consumption")
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "fuel_consumption")
     private int fuelConsumption;
 
     @Column(name = "fuel_capacity")
     private int fuelCapacity;
-
-    @Column(name = "speed")
-    private int speed;
 
     @Column(name = "empty_weight")
     private int emptyWeight;
 
     @Column(name = "number_of_pilots")
     private int numberOfPilots;
+
+    @Column(name = "flight_range")
+    private int flightRange;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "airline_company_id")
@@ -51,10 +54,6 @@ public abstract class Aircraft {
     }
 
     public abstract int calculateCarryingCapacity();
-
-    public int calculateRange() {
-        return fuelCapacity / fuelConsumption * speed;
-    }
 
     public Long getId() {
         return id;
@@ -78,14 +77,6 @@ public abstract class Aircraft {
 
     public void setFuelCapacity(int fuelCapacity) {
         this.fuelCapacity = fuelCapacity;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
     }
 
     public int getEmptyWeight() {
@@ -112,9 +103,26 @@ public abstract class Aircraft {
         this.airlineCompany = airlineCompany;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getFlightRange() {
+        return flightRange;
+    }
+
+    public void setFlightRange(int flightRange) {
+        this.flightRange = flightRange;
+    }
+
     protected abstract int calculateCrewWeight();
 
     protected int calculatePersonsWeight(int numberOfPersons) {
         return numberOfPersons * AVERAGE_PERSON_WEIGHT;
     }
+
 }
