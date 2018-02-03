@@ -1,0 +1,11 @@
+<dataset>
+    <AIRLINE_COMPANY id="1" name="Company"/>
+    <AIRLINE_COMPANY id="2" name="Some other"/>
+    <AIRCRAFT id="1" airline_company_id="1" name="cargo" empty_weight="0" fuel_capacity="0" fuel_consumption="0"
+              number_of_pilots="0" flight_range="0"/>
+    <CARGO_AIRCRAFT id="1" cargo_weight="0"/>
+    <AIRCRAFT id="2" airline_company_id="2" name="commercial" empty_weight="0" fuel_capacity="0" fuel_consumption="0"
+              number_of_pilots="0" flight_range="0"/>
+    <PASSENGER_AIRCRAFT id="2" number_of_passengers="0" number_of_flight_attendants="0"/>
+    <COMMERCIAL_JET id="2" maximum_baggage_weight_per_person="0"/>
+</dataset>
