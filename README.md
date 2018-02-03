@@ -1,14 +1,14 @@
 # Airline
 Console application “Airline”
 
-##Features
+## Features
 * Create airline company.
 * Create aircraft.
 * Calculate the total capacity and carrying capacity of all the aircraft in the airline.
 * Display the list of aircraft of the company sorted by flight range.
 * Find airplanes corresponding to a given range of fuel consumption parameters.
 
-##Running
+## Running
 
 To run the application execute
 
@@ -22,10 +22,10 @@ or
 mvn package && java -jar airline.jar
 ```
 
-##Getting started
+## Getting started
 Use help to get information about available commands.
 
-##Examples
+## Examples
 Show all airlines
 ```
 airlines
