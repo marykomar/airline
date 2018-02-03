@@ -6,7 +6,7 @@ CREATE SEQUENCE airline_sequence
   INCREMENT BY 50;
 CREATE TABLE airline_company (
   id   BIGINT NOT NULL,
-  name VARCHAR(255),
+  name VARCHAR(255) UNIQUE,
   PRIMARY KEY (id)
 );
 CREATE TABLE aircraft (
