@@ -28,4 +28,12 @@ public class CargoAircraft extends Aircraft {
     protected int calculateCrewWeight() {
         return calculatePersonsWeight(getNumberOfPilots());
     }
+
+    @Override
+    public String toString() {
+        return "CargoAircraft{" +
+                "maximumCargoWeight=" + maximumCargoWeight +
+                super.toString() +
+                '}';
+    }
 }

@@ -23,4 +23,12 @@ public class CommercialJet extends PassengerAircraft {
     protected int calculateBaggageWeight() {
         return getMaximumBaggageWeightPerPerson() * getMaximumNumberOfPassengers();
     }
+
+    @Override
+    public String toString() {
+        return "CommercialJet{" +
+                "maximumBaggageWeightPerPerson=" + maximumBaggageWeightPerPerson +
+                super.toString() +
+                '}';
+    }
 }

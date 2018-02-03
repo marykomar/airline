@@ -65,4 +65,10 @@ public class AirlineCompany {
         aircraft.setAirlineCompany(null);
     }
 
+    @Override
+    public String toString() {
+        return "AirlineCompany{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

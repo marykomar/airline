@@ -27,24 +27,45 @@ public abstract class Aircraft {
     @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", initialValue = 50)
     private Long id;
 
+    /**
+     * Aircraft name.
+     */
     @Column(name = "name")
     private String name;
 
+    /**
+     * Fuel consumption in liters per hour.
+     */
     @Column(name = "fuel_consumption")
     private int fuelConsumption;
 
+    /**
+     * Fuel capacity in liters.
+     */
     @Column(name = "fuel_capacity")
     private int fuelCapacity;
 
+    /**
+     * Empty weight of aircraft in kilograms.
+     */
     @Column(name = "empty_weight")
     private int emptyWeight;
 
+    /**
+     * Number of pilots.
+     */
     @Column(name = "number_of_pilots")
     private int numberOfPilots;
 
+    /**
+     * Flight range in kilometers.
+     */
     @Column(name = "flight_range")
     private int flightRange;
 
+    /**
+     * Airplane company this aircraft belongs to.
+     */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "airline_company_id")
     private AirlineCompany airlineCompany;
@@ -125,4 +146,13 @@ public abstract class Aircraft {
         return numberOfPersons * AVERAGE_PERSON_WEIGHT;
     }
 
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", fuelConsumption=" + fuelConsumption +
+                ", fuelCapacity=" + fuelCapacity +
+                ", emptyWeight=" + emptyWeight +
+                ", numberOfPilots=" + numberOfPilots +
+                ", flightRange=" + flightRange;
+    }
 }

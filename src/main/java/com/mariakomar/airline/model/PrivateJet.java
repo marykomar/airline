@@ -23,4 +23,12 @@ public class PrivateJet extends PassengerAircraft {
     protected int calculateBaggageWeight() {
         return maximumBaggageWeight;
     }
+
+    @Override
+    public String toString() {
+        return "PrivateJet{" +
+                "maximumBaggageWeight=" + maximumBaggageWeight +
+                super.toString() +
+                '}';
+    }
 }
