@@ -16,12 +16,6 @@ To run the application execute
 mvn spring-boot:run
 ```
 
-or
-
-```
-mvn package && java -jar airline.jar
-```
-
 ## Getting started
 Use help to get information about available commands.
 
